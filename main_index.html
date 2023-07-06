@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/includeHTML.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>뉴룸</title>
+</head>
+
+<body>
+
+    <header include-html="layout/header1.html"></header>
+
+    <header include-html="layout/header2.html"></header>
+    
+    <div class="explore_nearby">
+        <div class="container">
+            <h2 class="heading">추천 여행지</h2>
+            <div class="cities">
+                <div class="city">
+                    <a href="stay.html"><img src="img/seoul.jpg" alt="" />
+                        <div class="city_details">
+                            <span class="city_name">서울</span>
+                            <span class="city_distance">1시간 이동</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="city">
+                    <a href="stay.html"><img src="img/incheon.jpg" alt="" />
+                        <div class="city_details">
+                            <span class="city_name">인천</span>
+                            <span class="city_distance">2시간 이동</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="city">
+                    <a href="stay.html"><img src="img/busan.jpg" alt="" />
+                        <div class="city_details">
+                            <span class="city_name">부산</span>
+                            <span class="city_distance">5시간 이동</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="city">
+                    <a href="stay.html"> <img src="img/pic.jpg" alt="" />
+                        <div class="city_details">
+                            <span class="city_name">강릉</span>
+                            <span class="city_distance">3 시간 이동</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="live_things">
+        <div class="container">
+            <div class="heading">어디에서나 살아볼수 있다</div>
+            <div class="stays">
+                <a href="stay.html">
+                    <div class="item">
+                        <img src="img/seoul.jpg" alt="" />
+                        <span class="item_heading">서울에서 살기</span>
+                    </div>
+                </a>
+                <a href="stay.html">
+                    <div class="item">
+                        <img src="img/incheon.jpg" alt="" />
+                        <span class="item_heading">인천에서 살기</span>
+                    </div>
+                </a>
+                <a href="stay.html">
+                    <div class="item">
+                        <img src="img/busan.jpg" alt="" />
+                        <span class="item_heading">부산에서 살기</span>
+                    </div>
+                </a>
+                <a href="stay.html">
+                    <div class="item">
+                        <img src="img/pic.jpg" alt="" />
+                        <span class="item_heading">강릉에서 살기</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer include-html="layout/footer.html"></footer>
+
+    
+    <script>
+        includeHTML();
+        
+        $(document).ready(function () {
+            // window.addEventListener("resize", () => {
+            //     if (document.body.clientWidth > 728) {
+            //         $(".sticky_menu").css("display", "block");
+            //         $(".form").css("display", "none");
+            //         $(".logo").css("display", "none");
+            //         $(".menu2").css("display", "none");
+            //         $(".profile").css("display", "none");
+            //         $(".menu2").css("display", "none");
+            //     } else {
+            //         $(".sticky_menu").css("display", "none");
+            //         // $(".form").css("display", "flex");
+            //         // $(".logo").css("display", "flex");
+            //         // $(".menu2").css("display", "flex");
+            //         // $(".profile").css("display", "flex");
+            //         // $(".menu2").css("display", "flex");
+            //     }
+            // });
+
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 1) {
+                    $(".sticky_menu").css("display", "block");
+                    $(".formm").css("display", "none");
+                    $(".logo").css("display", "none");
+                    $(".profile").css("display", "none");
+                    $(".menu2").css("opacity", "0");
+                } else {
+                    $(".sticky_menu").css("display", "none");
+                    $(".formm").css("display", "flex");
+                    $(".logo").css("display", "flex");
+                    $(".profile").css("display", "flex");
+                    $(".menu2").css("opacity", "1");
+                }
+            });
+            // const mediaQuery = window.matchMedia('(min-width: 744px)')
+            // if (mediaQuery.matches) {
+            //     // Then trigger an alert
+            //     $(".sticky_menu").css("b", "flex");
+            //     $(".form").css("display", "flex");
+            // }
+
+            // function responsive() {
+            //     if (window.innerWidth < 744 && document.scrollTop() > 1) {
+            //         $(".sticky_menu").css("background-color", "yellow");
+            //         $(".sticky_menu").css("display", "flex");
+            //     }
+            //     else {
+            //         $(".sticky_menu").css("display", "flex");
+            //         $(".form").css("display", "flex");
+
+            //     }
+            // }
+            // window.addEventListener("resize", responsive);
+        });
+        includeHTML(function () {
+            // 이미지가 포함된 HTML 파일이 로드된 후 실행될 콜백 함수
+            $(document).ready(function () {
+                // 이미지를 포함한 나머지 코드 작성
+            });
+        });
+    </script>
+</body>
+
+</html>
